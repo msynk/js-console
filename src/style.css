@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: cursive;
+}
+
+#commandline {
+}
+
+#commandline span {
+    font-size: 20px;
+    margin-top: -5px;
+    float: left;    
+    padding-left: 5px;
+}
+
+#commandInput {
+    width: calc(100% - 25px);
+    margin-left: 5px;
+    resize: none;
+    /* border: none; */
+    overflow: hidden;
+    padding: 0;
+    outline: none;
+    background-color: #D0D0D0;
+}
