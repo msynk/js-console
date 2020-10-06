@@ -1,10 +1,12 @@
 (function () {
-    var bodyCtx = JSVs(), c = bodyCtx.commandInput;
-    document.body.onclick = c.focus.bind(c);
-    setTimeout(c.focus.bind(c));
+    var bodyCtx = JSVs(), c = bodyCtx.commandInput, f = c.focus.bind(c);
+    document.body.onclick = f; setTimeout(f);
+
     c.addEventListener('input', resize, false);
     c.addEventListener('keydown', function (e) { if (e.keyCode === 13 && !e.shiftKey) execute(e); }, false);
+
     function resize() { c.style.height = 'auto', c.style.height = c.scrollHeight + 'px'; }
+    
     function execute(e) {
         e.preventDefault();
         var cmd = c.value;
