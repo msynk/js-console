@@ -6,7 +6,7 @@
     c.addEventListener('keydown', function (e) { if (e.keyCode === 13 && !e.shiftKey) execute(e); }, false);
 
     function resize() { c.style.height = 'auto', c.style.height = c.scrollHeight + 'px'; }
-    
+
     function execute(e) {
         e.preventDefault();
         var cmd = c.value;
@@ -17,7 +17,7 @@
         bodyCtx.result.appendChild(div);
 
         try {
-            var res = eval(cmd);
+            var res = (0, eval)(cmd);
             var div = document.createElement('div');
             div.className = 'result';
             div.textContent = '= ' + res;
